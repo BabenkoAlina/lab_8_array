@@ -1,6 +1,6 @@
 import ctypes
-class Array:
 
+class Array:
     def __init__(self, size) -> None:
         self.size = size
         self._n = 0
@@ -21,9 +21,9 @@ class Array:
             return self._array[idex]
         else:
             return "Out of range"
-    
-    def set_item(self, idex, value):
 
-
-def clear(self, value):
-    
+    def clear(self, value):
+        for i in self._array:
+            if i is not value:
+                i == value
+        return self._array
