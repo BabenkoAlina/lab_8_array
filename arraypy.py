@@ -23,7 +23,7 @@ class Array:
             return "Out of range"
 
     def clear(self, value):
-        for i in self._array:
-            if i is not value:
-                i == value
+        for i, element in enumerate(self._array):
+            if element is not value:
+                self._array[i] = value
         return self._array
