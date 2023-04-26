@@ -1,10 +1,11 @@
 import ctypes
+
 class Array:
 
     def __init__(self, size) -> None:
-        self.size = size
+        self.size = max(size, 1)
         self._n = 0
-        self._array = (ctypes.py_object * self.size)()
+        self._array = (ctypes.c_bool * self.size)()
     
     def __length__(self):
         return self._n
@@ -21,6 +22,6 @@ class Array:
             return self._array[idex]
         else:
             return "Out of range"
-    
-    def set_item(self, idex, value):
         
+    def iterator(self):
+        return iter(self._array)
